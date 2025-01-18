@@ -1,13 +1,14 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 
-class UserCreate(BaseModel):
+class UserBase(BaseModel):
     name: str
-    email: EmailStr
+    email: str
 
-class UserResponse(BaseModel):
+class UserCreate(UserBase):
+    pass
+
+class User(UserBase):
     id: int
-    name: str
-    email: EmailStr
 
     class Config:
         orm_mode = True
