@@ -2,7 +2,8 @@ import time
 from sqlalchemy import create_engine
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
-from app.models import Base
+from app.db_base import Base
+
 
 SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:password@mysql/project_db"
 
