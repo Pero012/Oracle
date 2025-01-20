@@ -1,5 +1,0 @@
-CREATE DATABASE project_db;
-CREATE USER 'user'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON project_db.* TO 'user'@'%';
-FLUSH PRIVILEGES;
-EXIT;
